@@ -23,3 +23,22 @@ the browser was making my computer hot and laggy not to mention
 some disruptions from my vpn (coding in Beijing)
 
 so now am continuing in vs Code.
+
+## just saw that Shiffman also did this a second time
+
+https://youtu.be/OMoVcohRgZA
+
+
+## python version
+
+https://youtu.be/M_npdRYD4K0
+
+and here is a cool version using python curses for terminal
+
+the snake in the python code is not an object just a list of
+
+tuples holding x and y coordinates and using the list function 
+
+insert to put the head at the zero index.
+
+unshift works the same way in javascript 
