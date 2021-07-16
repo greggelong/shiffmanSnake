@@ -1,8 +1,10 @@
 let mysnake;
+let sz = 20; // global variable for size of snake to make it move on a grid
 
 function setup() {
   createCanvas(600,600);
   mysnake = new Snake();
+  frameRate(10);
 }
 
 function draw() {

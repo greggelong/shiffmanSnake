@@ -1,3 +1,6 @@
+// sz is a global variable that scales the snake so it
+// appears to move on a grid
+
 class Snake{
   constructor(){
     this.x =0;
@@ -13,12 +16,15 @@ class Snake{
   }
 
   update(){
-    this.x += this.xspeed;
-    this.y += this.yspeed;
+    this.x += this.xspeed*sz;
+    this.y += this.yspeed*sz;
+
+    this.x = constrain(this.x, 0, width-sz);
+    this.y = constrain(this.y, 0, height-sz);
   }
 
   show(){
-    rect(this.x,this.y,10,10)
+    rect(this.x,this.y,sz,sz)
   }
 
 
