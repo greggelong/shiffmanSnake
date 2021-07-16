@@ -10,6 +10,16 @@ class Snake{
 
   }
 
+  eat(pos){
+    // pos is the vector of the food
+    let d = dist(this.x,this.y,pos.x,pos.y);
+    if (d < 1){
+      return true;
+    }else{
+      return false;
+    }
+  }
+
   direct(x,y){
     this.xspeed = x;
     this.yspeed = y;
@@ -24,7 +34,8 @@ class Snake{
   }
 
   show(){
-    rect(this.x,this.y,sz,sz)
+    fill(0,255,0);
+    rect(this.x,this.y,sz,sz);
   }
 
 
