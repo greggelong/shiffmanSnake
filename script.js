@@ -12,19 +12,23 @@ function draw() {
 }
 
 function keyPressed(){
-  console.log(key);
+  //console.log(key);
   switch (key){
     case 'i':
-      console.log('up');
+      //console.log('up');
+      mysnake.direct(0,-1);
       break;
     case 'k':
-      console.log('DOWN');
+      //console.log('DOWN');
+      mysnake.direct(0,1);
       break;
     case 'j':
-      console.log('LEFT');
+      //console.log('LEFT');
+      mysnake.direct(-1,0);
       break;
     case 'l':
-      console.log('RIGHT');
+      //console.log('RIGHT');
+      mysnake.direct(1,0);
       break;
   } 
 }

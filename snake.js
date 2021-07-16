@@ -7,6 +7,11 @@ class Snake{
 
   }
 
+  direct(x,y){
+    this.xspeed = x;
+    this.yspeed = y;
+  }
+
   update(){
     this.x += this.xspeed;
     this.y += this.yspeed;
