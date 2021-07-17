@@ -5,7 +5,7 @@ class Snake{
   constructor(){
     //this.x =0;
     //this.y =0;
-    this.body = [createVector(0,0)];
+    this.body = [createVector(width/2,height/2)];
 
     this.xspeed = 1;
     this.yspeed = 0;
