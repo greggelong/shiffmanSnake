@@ -7,7 +7,7 @@ let smart;
 function setup() {
   createCanvas(600,600);
   selfCheck = createCheckbox('random move', false);
-  smart = createCheckbox('smart move', false);
+  smart = createCheckbox('smart move', true);
 
   mysnake = new Snake();
   // need to call a functiion that picks a location on the grid
@@ -35,6 +35,7 @@ function draw() {
 
   }
   fill(255,0,0);
+  stroke(0);
   rect(food.x,food.y,sz,sz);
 
   if (selfCheck.checked()){

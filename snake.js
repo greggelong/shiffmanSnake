@@ -61,7 +61,12 @@ class Snake{
 
   show(){
     fill(0,255,0);
-    for (let i =0; i <this.body.length;i++){
+    for (let i = 0; i <this.body.length;i++){
+      if(i === 0){
+        stroke(255,0,0);
+      }else{
+        stroke(0);
+      }
     
     rect(this.body[i].x,this.body[i].y,sz,sz);
     }
