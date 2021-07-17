@@ -3,17 +3,26 @@
 
 class Snake{
   constructor(){
-    this.x =0;
-    this.y =0;
+    //this.x =0;
+    //this.y =0;
+    this.body = [createVector(0,0)];
+
     this.xspeed = 1;
     this.yspeed = 0;
 
   }
 
+  grow(){
+
+    let head = this.body[0].copy()
+    this.body.unshift(head);
+  }
+
   eat(pos){
     // pos is the vector of the food
-    let d = dist(this.x,this.y,pos.x,pos.y);
+    let d = dist(this.body[0].x,this.body[0].y,pos.x,pos.y);
     if (d < 1){
+      this.grow() // grow the snake if it eats the food
       return true;
     }else{
       return false;
@@ -26,16 +35,26 @@ class Snake{
   }
 
   update(){
-    this.x += this.xspeed*sz;
-    this.y += this.yspeed*sz;
+    // take a copy of the first in the array
+    let head = this.body[0].copy();
+    this.body.pop()
+    head.x += (this.xspeed*sz);
+    head.y += (this.yspeed*sz);
+    this.body.unshift(head);
 
-    this.x = constrain(this.x, 0, width-sz);
-    this.y = constrain(this.y, 0, height-sz);
+
+      
+
+    this.body[0].x = constrain(this.body[0].x, 0, width-sz);
+    this.body[0].y = constrain(this.body[0].y, 0, height-sz);
   }
 
   show(){
     fill(0,255,0);
-    rect(this.x,this.y,sz,sz);
+    for (let i =0; i <this.body.length;i++){
+    
+    rect(this.body[i].x,this.body[i].y,sz,sz);
+    }
   }
 
 
