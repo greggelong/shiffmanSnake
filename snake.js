@@ -36,14 +36,24 @@ class Snake{
 
   update(){
     // take a copy of the first in the array
+    
     let head = this.body[0].copy();
     this.body.pop()
     head.x += (this.xspeed*sz);
     head.y += (this.yspeed*sz);
     this.body.unshift(head);
-
-
+  
+    /* 
+    the code below doesn't work you really need to copy
+    one increase it delete one then add the copy to the start
+    this.body[0].x += this.xspeed*sz;
+    this.body[0].y += this.yspeed*sz;
+    if (this.body.length >= 2){
+      this.body.pop();
       
+    }
+
+    */     
 
     this.body[0].x = constrain(this.body[0].x, 0, width-sz);
     this.body[0].y = constrain(this.body[0].y, 0, height-sz);
