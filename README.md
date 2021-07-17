@@ -88,5 +88,24 @@ but avoids it's own body.
  a trap pretty easily i think )
 
  
+ ## play it live
+
+ remember you don't die yet!!!
+
+ just enjoy watching a snake satisfying it's hunger
+
+ and getting longer.
+ 
+
+ https://greggelong.github.io/shiffmanSnake/
+
+ for manual play use i,k,j,l
+
+ click only random for random walk auto play
+
+ click only smart for smart auto play
+
+ (if both random and smart it will be smart )
+
 
 
