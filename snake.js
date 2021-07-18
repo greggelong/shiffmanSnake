@@ -1,6 +1,6 @@
 // sz is a global variable that scales the snake so it
 // appears to move on a grid
-
+let sz = 20;
 class Snake{
   constructor(){
     //this.x =0;
@@ -9,6 +9,7 @@ class Snake{
 
     this.xspeed = 1;
     this.yspeed = 0;
+
 
   }
 
