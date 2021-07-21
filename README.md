@@ -107,5 +107,9 @@ but avoids it's own body.
 
  (if both random and smart it will be smart )
 
+## working on two snakes
 
+made a branch twosnake, where I have changed the snake class
+
+the two snakes compete for the food but it is rather boring
 
