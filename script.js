@@ -9,7 +9,8 @@ function setup() {
   selfCheck = createCheckbox('random move', false);
   smart = createCheckbox('smart move', true);
 
-  mysnake = new Snake();
+  mysnake = new Snake(createVector(0,0),color(0,255,0,50));
+  yoursnake = new Snake(createVector(0,400),color(0,0,255,50));
   // need to call a functiion that picks a location on the grid
   pickLocation();
   frameRate(10);
@@ -28,12 +29,10 @@ function draw() {
   background(51);
   mysnake.update();
   mysnake.show();
+  yoursnake.update();
+  yoursnake.show();
   
-  if (mysnake.eat(food)){
-    // if snake eats the food get a new location
-    pickLocation();
-
-  }
+  
   fill(255,0,0);
   stroke(0);
   rect(food.x,food.y,sz,sz);
@@ -43,9 +42,16 @@ function draw() {
   }
   if (smart.checked()){
     smartWalk();
+    smartWalk2();
     
   }
   print(smart.checked())
+
+  if (mysnake.eat(food)){
+    // if snake eats the food get a new location
+    pickLocation();
+
+  }
 
 }
 
@@ -73,29 +79,72 @@ function walk(){
 }
 
 function smartWalk(){
+  if (mysnake.eat(food)){
+    // if snake eats the food get a new location
+    pickLocation();
+
+  }
   print("i am smart");
   // needs to be the snakes head
   print(mysnake.body[0].x,food.x);
  if (mysnake.body[0].x > food.x){
    mysnake.direct(-1,0);
+  
    print("left")
-   print(mysnake.body[0].x,food.x);
+   
 
  }
- if (mysnake.body[0].x < food.x){
+ else if (mysnake.body[0].x < food.x){
    mysnake.direct(1,0);
+   
    print("right");
  }
- if (mysnake.body[0].y > food.y){
+ else if (mysnake.body[0].y > food.y){
   mysnake.direct(0,-1);
+  
   print("up");
 
 }
-if (mysnake.body[0].y < food.y){
+else if (mysnake.body[0].y < food.y){
   mysnake.direct(0,1);
+
   print("down");
 }
+}
 
+
+function smartWalk2(){
+  if (yoursnake.eat(food)){
+    // if snake eats the food get a new location
+    pickLocation();
+
+  }
+  print("i am smart");
+  // needs to be the snakes head
+  print(yoursnake.body[0].x,food.x);
+ if (yoursnake.body[0].x > food.x){
+   yoursnake.direct(-1,0);
+  
+   print("left")
+   
+
+ }
+ else if (yoursnake.body[0].x < food.x){
+   yoursnake.direct(1,0);
+   
+   print("right");
+ }
+ else if (yoursnake.body[0].y > food.y){
+  yoursnake.direct(0,-1);
+  
+  print("up");
+
+}
+else if (yoursnake.body[0].y < food.y){
+  yoursnake.direct(0,1);
+
+  print("down");
+}
 
 }
 
@@ -120,5 +169,4 @@ function keyPressed(){
       break;
   } 
 }
-
 
