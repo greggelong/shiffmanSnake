@@ -2,10 +2,12 @@
 // appears to move on a grid
 
 class Snake{
-  constructor(){
-    //this.x =0;
-    //this.y =0;
-    this.body = [createVector(width/2,height/2)];
+  constructor(vect, clr){
+     
+    this.vect = vect;
+     
+    this.clr = clr;
+    this.body = [this.vect];
 
     this.xspeed = 1;
     this.yspeed = 0;
@@ -21,7 +23,7 @@ class Snake{
   eat(pos){
     // pos is the vector of the food
     let d = dist(this.body[0].x,this.body[0].y,pos.x,pos.y);
-    if (d < 1){
+    if (d < 2){
       this.grow() // grow the snake if it eats the food
       return true;
     }else{
@@ -60,7 +62,7 @@ class Snake{
   }
 
   show(){
-    fill(0,255,0);
+    fill(this.clr);
     for (let i = 0; i <this.body.length;i++){
       if(i === 0){
         stroke(255,0,0);
