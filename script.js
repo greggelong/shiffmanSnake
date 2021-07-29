@@ -8,6 +8,10 @@ function setup() {
   createCanvas(600,600);
   selfCheck = createCheckbox('random move', false);
   smart = createCheckbox('smart move', true);
+  createP();
+  createP(); // put some space between button and link
+  createA('https://github.com/greggelong/shiffmanSnake', 'link to this  repo');
+  
 
   mysnake = new Snake();
   // need to call a functiion that picks a location on the grid
