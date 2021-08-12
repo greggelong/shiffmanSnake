@@ -1,3 +1,10 @@
+html, body {
+  margin: 0;
+  padding: 10px;
+  background: black;
+  color:chartreuse;
+  font-size: large;
+}
 canvas {
-  border: 1px solid #000;
+  display: block;
 }
