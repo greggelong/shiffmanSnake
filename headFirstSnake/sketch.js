@@ -1,3 +1,20 @@
+let x = [];
+let y = [];
+//let l = 1;  //just using the array length property
+let sz = 20;
+let w = 40;
+let h = 24;
+let fx = 0;
+let fy = 0;
+let xspeed = 0;
+let yspeed = 0;
+
+let N = false;
+let S = false;
+let E = false;
+let W = false;
+
+
 function setup() {
     createCanvas(800, 480);
     background(0);
