@@ -1,5 +1,7 @@
 This is some fun coding
 
+https://greggelong.github.io/shiffmanSnake/
+
 just to keep me thinking procedurally after all the prolog
 
 and to have some practice not putting a full stop after
@@ -112,4 +114,40 @@ but avoids it's own body.
 made a branch twosnake, where I have changed the snake class
 
 the two snakes compete for the food but it is rather boring
+
+
+-----
+
+##  August 27- onward
+
+working on a non object oriented versions of the snake game
+
+the topic captured my interest after the coding train did the 
+
+"what was coding like 40 years ago"  
+
+Daniel did a version in applesoft basic that was really elegant
+
+I have made two less elegant versions to better understand the moving the snake in the array
+
+I have a 
+
+butt first version that Daniel uses
+
+https://greggelong.github.io/shiffmanSnake/buttFirstSnake/
+
+and I have a 
+
+head first version that seems more natural to me
+
+https://greggelong.github.io/shiffmanSnake/headFirstSnake/
+
+I have coded them with characters the snake counts its body parts 
+
+
+I hope to make a c64 version 
+
+but the c64 handles x y coords in a different way than apple so
+
+just a bit more math and I will poke screen graphics not  print text to the screen
 
