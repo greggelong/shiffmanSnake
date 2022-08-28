@@ -144,6 +144,7 @@ https://greggelong.github.io/shiffmanSnake/headFirstSnake/
 
 I have coded them with characters the snake counts its body parts 
 
+use I K J L to move up down left right
 
 I hope to make a c64 version 
 
